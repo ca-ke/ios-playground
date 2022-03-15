@@ -124,7 +124,7 @@
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Generate Story Prompt"/>
                                         <connections>
-                                            <segue destination="GHd-rx-z0D" kind="show" id="isK-Pc-8NS"/>
+                                            <action selector="generateStoryPrompt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wa3-gO-lr4"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -146,6 +146,7 @@
                         <outlet property="numberSlider" destination="0L6-lZ-I54" id="d7j-lo-54b"/>
                         <outlet property="storyPromptImageView" destination="U7e-Jc-7Yz" id="1jN-g4-m48"/>
                         <outlet property="verbTextField" destination="8LA-Dk-YOX" id="WcG-LV-Clh"/>
+                        <segue destination="GHd-rx-z0D" kind="show" identifier="StoryPrompt" id="e4c-bn-z4f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -178,6 +179,10 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="object-badge-banner" translatesAutoresizingMaskIntoConstraints="NO" id="jIE-zc-p4L">
                                 <rect key="frame" x="0.0" y="-52" width="414" height="1000"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="FSq-U3-3WQ"/>
+                                    <constraint firstAttribute="height" constant="1000" id="pBq-ew-4HY"/>
+                                </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KFP-c6-ckK">
                                 <rect key="frame" x="87" y="384" width="240" height="128"/>
@@ -194,14 +199,10 @@
                         <viewLayoutGuide key="safeArea" id="Rwg-hX-grx"/>
                         <color key="backgroundColor" red="0.0" green="0.89411764705882346" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="jIE-zc-p4L" firstAttribute="width" secondItem="zsf-iu-wWC" secondAttribute="width" multiplier="0.903382" id="G4H-Q3-arU"/>
-                            <constraint firstItem="jIE-zc-p4L" firstAttribute="centerX" secondItem="zsf-iu-wWC" secondAttribute="centerX" id="aGJ-FI-I78"/>
-                            <constraint firstItem="KFP-c6-ckK" firstAttribute="centerY" secondItem="jIE-zc-p4L" secondAttribute="centerY" id="bd0-zB-Vvm"/>
-                            <constraint firstItem="KFP-c6-ckK" firstAttribute="top" secondItem="jIE-zc-p4L" secondAttribute="bottom" constant="-564" id="c00-2X-QP8"/>
-                            <constraint firstItem="jIE-zc-p4L" firstAttribute="centerY" secondItem="zsf-iu-wWC" secondAttribute="centerY" id="gkf-3g-6hw"/>
-                            <constraint firstItem="jIE-zc-p4L" firstAttribute="width" secondItem="zsf-iu-wWC" secondAttribute="width" multiplier="0.903382" id="l1F-JZ-rny"/>
-                            <constraint firstItem="KFP-c6-ckK" firstAttribute="leading" secondItem="jIE-zc-p4L" secondAttribute="trailing" constant="-327" id="oyN-Gp-EIi"/>
-                            <constraint firstItem="jIE-zc-p4L" firstAttribute="width" secondItem="zsf-iu-wWC" secondAttribute="width" id="xTL-ne-zo3"/>
+                            <constraint firstItem="KFP-c6-ckK" firstAttribute="centerX" secondItem="jIE-zc-p4L" secondAttribute="centerX" id="Cw7-sQ-S7i"/>
+                            <constraint firstItem="KFP-c6-ckK" firstAttribute="centerY" secondItem="zsf-iu-wWC" secondAttribute="centerY" id="RGx-PZ-6wH"/>
+                            <constraint firstItem="KFP-c6-ckK" firstAttribute="centerX" secondItem="zsf-iu-wWC" secondAttribute="centerX" id="WRt-1n-pzi"/>
+                            <constraint firstItem="KFP-c6-ckK" firstAttribute="centerY" secondItem="jIE-zc-p4L" secondAttribute="centerY" id="mZH-qF-LTW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aT2-hp-ye6"/>
@@ -212,7 +213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OFx-lz-U3n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="734.78260869565224" y="68.973214285714278"/>
+            <point key="canvasLocation" x="1203" y="69"/>
         </scene>
     </scenes>
     <resources>

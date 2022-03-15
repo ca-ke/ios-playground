@@ -37,7 +37,7 @@ class AddStoryPromptViewController: UIViewController {
     @IBAction func generateStoryPrompt(_ sender: Any) {
         updateStoryPrompt()
         if storyPromptEntry.isValid() {
-            
+            performSegue(withIdentifier: "StoryPrompt", sender: nil)
         } else {
             let alert = UIAlertController(title: "Invalid Story Prompt", message: "Please fill out all of the field", preferredStyle: .alert)
             let action = UIAlertAction(title: "Ok", style: .default, handler: { action in })
@@ -54,6 +54,16 @@ class AddStoryPromptViewController: UIViewController {
         storyPromptImageView.isUserInteractionEnabled = true
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(changeImage))
         storyPromptImageView.addGestureRecognizer(gestureRecognizer)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "StoryPrompt" {
+            let destinationViewController = segue.destination as? StoryPromptViewController
+            guard let storyPromptViewController = destinationViewController else {
+                return
+            }
+            storyPromptViewController.storyPromptEntry = storyPromptEntry
+        }
     }
     
     @objc func changeImage() {
