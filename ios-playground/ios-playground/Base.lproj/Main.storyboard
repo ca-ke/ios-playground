@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="nVJ-pI-q3L">
-                                <rect key="frame" x="20" y="145" width="374" height="652.5"/>
+                                <rect key="frame" x="20" y="101" width="374" height="652.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="e5X-fx-762">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
@@ -151,7 +152,39 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="68.973214285714278"/>
+            <point key="canvasLocation" x="177" y="-231"/>
+        </scene>
+        <!--Story Prompt Table View Controller-->
+        <scene sceneID="iJB-9Z-VOV">
+            <objects>
+                <tableViewController id="588-Hv-p78" customClass="StoryPromptTableViewController" customModule="ios_playground" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OpK-7R-Gz9" customClass="Story">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryPromptCell" id="Mnv-tP-nwz">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mnv-tP-nwz" id="hJj-AJ-BrC">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="588-Hv-p78" id="Ff6-zv-Bzi"/>
+                            <outlet property="delegate" destination="588-Hv-p78" id="ICe-bz-ciW"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="S7i-dB-tQ3"/>
+                    <connections>
+                        <segue destination="GHd-rx-z0D" kind="show" identifier="ShowStoryPrompt" id="1ea-sm-qoj"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pN8-uA-Kyf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="177" y="475"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fAY-ch-YSa">
@@ -162,7 +195,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="RKn-AY-KTN"/>
+                        <segue destination="588-Hv-p78" kind="relationship" relationship="rootViewController" id="l9c-la-MJa"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9md-Bv-cTu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -174,18 +207,18 @@
             <objects>
                 <viewController id="GHd-rx-z0D" customClass="StoryPromptViewController" customModule="ios_playground" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zsf-iu-wWC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="object-badge-banner" translatesAutoresizingMaskIntoConstraints="NO" id="jIE-zc-p4L">
-                                <rect key="frame" x="0.0" y="-52" width="414" height="1000"/>
+                                <rect key="frame" x="0.0" y="-79" width="414" height="1000"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="FSq-U3-3WQ"/>
                                     <constraint firstAttribute="height" constant="1000" id="pBq-ew-4HY"/>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KFP-c6-ckK">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <rect key="frame" x="87" y="357" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="LW2-Ie-STZ"/>
                                     <constraint firstAttribute="width" constant="240" id="bzg-tI-we5"/>
@@ -216,10 +249,16 @@
             <point key="canvasLocation" x="1203" y="69"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="e4c-bn-z4f"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="10.circle" catalog="system" width="128" height="121"/>
         <image name="5.circle" catalog="system" width="128" height="121"/>
         <image name="object-badge-banner" width="1000" height="1000"/>
         <image name="object-object_box-of-books" width="1000" height="1000"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
