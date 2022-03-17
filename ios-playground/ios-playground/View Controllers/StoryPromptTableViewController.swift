@@ -10,12 +10,6 @@ import UIKit
 class StoryPromptTableViewController: UITableViewController {
     var storyPromptEntries: [StoryPromptEntry] = [StoryPromptEntry]()
     
-    
-    
-    @IBAction func onAddStoryPromptClicked(_ sender: Any) {
-        performSegue(withIdentifier: "ShowAddStoryPrompt", sender: nil)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

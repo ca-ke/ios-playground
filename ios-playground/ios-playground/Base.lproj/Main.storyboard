@@ -178,7 +178,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="S7i-dB-tQ3">
-                        <barButtonItem key="rightBarButtonItem" title="+" id="GFo-dq-oK7">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="GFo-dq-oK7">
                             <connections>
                                 <action selector="onAddStoryPromptClicked:" destination="588-Hv-p78" id="Dbf-wV-Eu9"/>
                                 <segue destination="BYZ-38-t0r" kind="show" identifier="ShowAddStoryPrompt" id="TWl-x4-L3j"/>
