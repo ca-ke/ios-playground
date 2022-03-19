@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D27196E27E66C7A009FE4D9 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D27196D27E66C7A009FE4D9 /* Book.swift */; };
+		0D27197327E675E4009FE4D9 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D27197227E675E4009FE4D9 /* Library.swift */; };
 		0D83580227E5695100EAFEE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D83580127E5695100EAFEE2 /* AppDelegate.swift */; };
 		0D83580427E5695100EAFEE2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D83580327E5695100EAFEE2 /* SceneDelegate.swift */; };
 		0D83580627E5695100EAFEE2 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D83580527E5695100EAFEE2 /* LibraryViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		0D27196D27E66C7A009FE4D9 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		0D27197227E675E4009FE4D9 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		0D8357FE27E5695100EAFEE2 /* todo-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "todo-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D83580127E5695100EAFEE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D83580327E5695100EAFEE2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				0D27196D27E66C7A009FE4D9 /* Book.swift */,
+				0D27197227E675E4009FE4D9 /* Library.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			files = (
 				0D27196E27E66C7A009FE4D9 /* Book.swift in Sources */,
 				0D83580627E5695100EAFEE2 /* LibraryViewController.swift in Sources */,
+				0D27197327E675E4009FE4D9 /* Library.swift in Sources */,
 				0D83580227E5695100EAFEE2 /* AppDelegate.swift in Sources */,
 				0D83580427E5695100EAFEE2 /* SceneDelegate.swift in Sources */,
 			);
