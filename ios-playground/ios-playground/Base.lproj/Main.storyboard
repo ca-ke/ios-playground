@@ -249,9 +249,12 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="storyPromptTextView" destination="KFP-c6-ckK" id="1eo-lk-GBD"/>
+                        <segue destination="cgH-t1-pet" kind="unwind" identifier="SaveStoryPrompt" unwindAction="saveStoryPromptWithUnwindSegue:" id="wIb-dL-1O4"/>
+                        <segue destination="cgH-t1-pet" kind="unwind" identifier="CancelStoryPrompt" unwindAction="cancelStoryPromptWithUnwindSegue:" id="tEW-Sy-KwL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OFx-lz-U3n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="cgH-t1-pet" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1203" y="69"/>
         </scene>
