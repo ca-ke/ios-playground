@@ -28,15 +28,39 @@ class LibraryViewController: UITableViewController {
 
     // MARK: - DataSource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Library.books.count
+        return Library.books.count + 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BookCell", for: indexPath)
-        let book = Library.books[indexPath.row]
+        if indexPath == IndexPath(row: 0, section: 0) {
+            let addNewBookCell = buildNewBookCell(tableView, indexPath: indexPath)
+            return addNewBookCell
+        } else {
+            let bookCell = buildBookCell(tableView, indexPath: indexPath)
+            return bookCell
+        }
+    }
+    
+    private func buildNewBookCell(_ tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(NewBookCell.self)", for: indexPath) as? NewBookCell else {
+            fatalError("You shall not pass!")
+        }
+        return cell
+    }
+    
+    private func buildBookCell(_ tableView: UITableView, indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "\(BookCell.self)", for: indexPath) as? BookCell else {
+            fatalError("You shall not pass!")
+        }
         
-        cell.textLabel?.text = book.title
-        cell.imageView?.image = book.image
+        let book = Library.books[indexPath.row - 1]
+        
+        cell.titleLabel.text = book.title
+        cell.authorLabel.text = book.author
+        cell.reviewLabel.text = book.review
+        
+        cell.bookThumbnailImageView.image = book.image
+        cell.bookThumbnailImageView.layer.cornerRadius = 12
         
         return cell
     }
